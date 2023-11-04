@@ -65,10 +65,11 @@ const ToDoList = () => {
           );
         })}
 
-        <span className="ca" onClick={delAll}>
+       
+      </div>
+      <span className="ca" onClick={delAll}>
           Clear All
         </span>
-      </div>
     </div>
   );
 };
