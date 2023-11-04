@@ -6,11 +6,13 @@ const ToDoList = () => {
 
   // ---------Adding Todos-----------//
   const handleSubmit = () => {
+
     if (!query) {
-    }
-    {
-      setItems([...items, query]);
-      setQuey("");
+    } else {
+      setItems((prev)=>{
+        return [...prev, query]
+      });
+      setQuey(" ");
     }
   };
 
@@ -19,12 +21,10 @@ const ToDoList = () => {
   // --------Deleting the Task -----/
 
   const handleDeleteList = (removingItems) => {
-    setTimeout(() => {
       const updatedList = items.filter((elem, ids) => {
         return ids !== removingItems;
       });
-      setItems(updatedList);
-    }, 200);
+      return setItems(updatedList);
   };
 
   const delAll = () => {
