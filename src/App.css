@@ -46,9 +46,14 @@
   max-width: 800px;
   padding-bottom: 40px;
   position: relative;
+}
+
+.cardwarp{
+  position: relative;
   max-height: 60vh;
   overflow-y: auto;
 }
+
 
 .formWarp {
   display: flex;

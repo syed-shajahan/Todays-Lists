@@ -6,11 +6,10 @@ const ToDoList = () => {
 
   // ---------Adding Todos-----------//
   const handleSubmit = () => {
-
     if (!query) {
     } else {
-      setItems((prev)=>{
-        return [...prev, query]
+      setItems((prev) => {
+        return [...prev, query];
       });
       setQuey(" ");
     }
@@ -21,10 +20,10 @@ const ToDoList = () => {
   // --------Deleting the Task -----/
 
   const handleDeleteList = (removingItems) => {
-      const updatedList = items.filter((elem, ids) => {
-        return ids !== removingItems;
-      });
-      return setItems(updatedList);
+    const updatedList = items.filter((elem, ids) => {
+      return ids !== removingItems;
+    });
+    return setItems(updatedList);
   };
 
   const delAll = () => {
@@ -48,28 +47,29 @@ const ToDoList = () => {
           </button>
         </div>
 
-        {items.map((elem, id) => {
-          return (
-            <div
-              className={
-                handleSubmit ? `listcardWarp active` : `listcardWarp remove`
-              }
-              key={id}
-            >
-              <div className="listcard">{elem}</div>
-              <button className="delBtn" onClick={() => handleDeleteList(id)}>
-                {" "}
-                🗑️{" "}
-              </button>
-            </div>
-          );
-        })}
-
-       
+        <div className=" cardwarp">
+          {items.map((elem, id) => {
+            return (
+              <div
+                className={
+                  handleSubmit ? `listcardWarp active` : `listcardWarp remove`
+                }
+                key={id}
+              >
+                <div className="listcard">{elem}</div>
+                <button className="delBtn" onClick={() => handleDeleteList(id)}>
+                  {" "}
+                  🗑️{" "}
+                </button>
+              </div>
+            );
+          })}
+          
+        </div>
+        <span className="ca" onClick={delAll}>
+            Clear All
+          </span>
       </div>
-      <span className="ca" onClick={delAll}>
-          Clear All
-        </span>
     </div>
   );
 };
