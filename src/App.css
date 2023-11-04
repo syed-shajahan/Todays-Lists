@@ -1,0 +1,179 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.todo_list_container {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0px 10px 26px #ccc;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.formWarp {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.formWarp input {
+  max-width: 100%;
+  padding: 13px 18px;
+  border: 1px solid #ccc;
+  outline: none;
+  flex: 1;
+  border-radius: 25px 0px 0px 25px;
+}
+
+.addBtn {
+  outline: none;
+  padding: 13px 15px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: #fff !important;
+  cursor: pointer;
+  color: #000;
+  transition: 0.3s;
+  max-width: 100px;
+  min-width: 100px;
+  border-radius: 0px 25px 25px 0px;
+}
+
+.addBtn:hover {
+  transform: scale(0.9);
+  background-color: #088391;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.listcard {
+  padding: 10px;
+  border-bottom: 1px dashed #ccc;
+  font-size: 15px;
+  letter-spacing: 0.4;
+  line-height: 24px;
+  color: #000;
+
+}
+
+.listcardWarp.active{
+  animation:  faded 0.5s ease-in-out;
+  transition: 0.5s;
+}
+
+.listcardWarp.remove{
+  animation:  fadeout 0.3s ease-in-out;
+  transition: 0.3s;
+}
+
+
+
+.listcardWarp {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.listcardWarp .listcard {
+  flex: 1;
+}
+
+.delBtn{
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: #EEE;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+
+.delBtn:hover{
+  background-color: #e63b3b;
+  color: #fff;
+}
+
+.ca {
+  display: block;
+  margin: auto;
+  border: 1px solid #eee;
+  border-radius: 25px;
+  font-size: 12px;
+  text-align: center;
+  color: #7b7b7bd0;
+  max-width: 100px;
+  margin-top: 40px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ca:hover {
+  background-color: #03030343;
+  color: #fff;
+}
+
+@keyframes faded {
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+    
+  }
+}
+
+/* its not taking we figer it out later */
+@keyframes fadedout {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+    background-color: red;
+  }
+  to{
+    opacity: 0;
+    transform: translateY(-5px);
+    
+  }
+}
+
+
+
