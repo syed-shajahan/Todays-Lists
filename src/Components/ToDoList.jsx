@@ -12,9 +12,9 @@ const ToDoList = () => {
       setItems((prev) => {
         return [...prev, query];
         setQuey(" ");
-
       });
     }
+
   };
 
   console.log(items, " heres is your added list will be");
@@ -39,7 +39,7 @@ const ToDoList = () => {
 
         <div className="formWarp">
           <input
-            type="text"
+            type="search"
             placeholder="Set task for the day"
             value={query}
             onChange={(e) => setQuey(e.target.value)}
