@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable no-unreachable */
+import React, { useEffect, useState } from "react";
 
 const ToDoList = () => {
   const [query, setQuey] = useState("");
@@ -10,8 +11,9 @@ const ToDoList = () => {
     } else {
       setItems((prev) => {
         return [...prev, query];
+        setQuey(" ");
+
       });
-      setQuey(" ");
     }
   };
 
@@ -64,11 +66,10 @@ const ToDoList = () => {
               </div>
             );
           })}
-          
         </div>
         <span className="ca" onClick={delAll}>
-            Clear All
-          </span>
+          Clear All
+        </span>
       </div>
     </div>
   );
